@@ -3,12 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Checker"
         mc:Ignorable="d"
         Title="Checker" Height="350" Width="525" ResizeMode="NoResize" ShowInTaskbar="False">
     <Grid>
         <Grid Margin="10">
-            <Button Content="Wallmart" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Button_Click" Margin="10,246,0,0"/>
+            <Button Content="Check" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Button_Click" Margin="10,246,0,0"/>
             <Button Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,271,0,0" IsCancel="True" Click="Button_Click_1"/>
             <Label Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Height="27" Width="60"/>
             <Label Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,42,0,0"/>
@@ -16,7 +15,8 @@
 
 
         </Grid>
-        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Margin="89,22,0,0"/>
-        <TextBox x:Name="PaswordTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Margin="89,55,0,0"/>
+        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Margin="89,22,0,0" Text="zdv3223666@gmail.com"/>
+        <TextBox x:Name="PaswordTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Margin="89,55,0,0" Text="mogilev_01"/>
+        <CheckBox x:Name="WallmartCheckBox" Content="Wallmart" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,94,0,0" IsChecked="True"/>
     </Grid>
 </Window>

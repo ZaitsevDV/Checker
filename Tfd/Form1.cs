@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Demo
 {
@@ -157,14 +151,11 @@ namespace Demo
 
             Browser.Navigate().GoToUrl("http://www.degraeve.com/reference/simple-ajax-example.php");
 
-
-
             IWebElement Button = Browser.FindElement(By.CssSelector("input[value='Go']"));
             Button.Click();
 
             WebDriverWait ww = new WebDriverWait(Browser, TimeSpan.FromSeconds(10));
             IWebElement txt = ww.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#result  p")));
-
 
             textBox1.Text = txt.Text;
 
@@ -185,7 +176,6 @@ namespace Demo
 
         private void button9_Click(object sender, EventArgs e)
         {
-            
             Browser = new OpenQA.Selenium.Chrome.ChromeDriver(/*co*/);
             Browser.Manage().Window.Maximize();
             Browser.Navigate().GoToUrl("https://www.walmart.com/account/login?tid=0&returnUrl=%2F");
@@ -209,7 +199,7 @@ namespace Demo
             if (GetElement(By.XPath("(//button[@type='button'])[35]")) == null) return;
             GetElement(By.XPath("(//button[@type='button'])[35]")).Click();
             GetElement(By.LinkText("2014")).Click();
-            Screenshot ss = ((ITakesScreenshot)Browser).GetScreenshot();
+            var ss = ((ITakesScreenshot)Browser).GetScreenshot();
             ss.SaveAsFile(fileName, System.Drawing.Imaging.ImageFormat.Jpeg);
         }
     }
