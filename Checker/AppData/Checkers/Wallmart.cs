@@ -1,7 +1,7 @@
 ﻿using AppData.Model;
 using OpenQA.Selenium;
-using System;
 using System.Linq;
+using System.Threading;
 
 namespace AppData.Checkers
 {
@@ -17,23 +17,16 @@ namespace AppData.Checkers
 
         public void Check(string login, string password)
         {
-            User user = new User("zdv3223666@gmail.com", "mogilev_01");
-
-            if (login != null && password != null)
-            {
-                user.Login = login;
-                user.Password = password;
-            }
-
+            var store = new Store();
+            var user = new User(login, password);
             _browser = new OpenQA.Selenium.Chrome.ChromeDriver();
             _browser.Manage().Window.Maximize();
-            _browser.Navigate().GoToUrl("https://www.walmart.com/account/login?tid=0&returnUrl=%2F");
+            _browser.Navigate().GoToUrl("https://www.walmart.com/account/login");
 
             var emailInput = GetElement(By.Name("email"));
             var passwordInput = GetElement(By.Name("password"));
             var rememberMe = GetElement(By.XPath("//div[4]/div/div/label"));
             var submitButton = GetElement(By.XPath("//button[@type='submit']"));
-            var fileName = "Screenshot " + DateTime.Now.ToString("yyyyMMdd_HHmmss tt") + ".jpeg";
 
             emailInput.Click();
             emailInput.Clear();
@@ -42,18 +35,34 @@ namespace AppData.Checkers
             passwordInput.SendKeys(user.Password);
             rememberMe.Click();
             submitButton.Click();
+            Thread.Sleep(1000);
 
-            _browser.Navigate().GoToUrl("https://www.walmart.com/account");
-            _browser.Navigate().GoToUrl("https://www.walmart.com/account/orders");
-
-            if (GetElement(By.XPath("(//button[@type='button'])[35]")) != null)
+            if (_browser.Url == "https://www.walmart.com/account/login")
             {
-                GetElement(By.XPath("(//button[@type='button'])[35]")).Click();
-                GetElement(By.LinkText("2014")).Click();
-                var ss = ((ITakesScreenshot) _browser).GetScreenshot();
-                ss.SaveAsFile(fileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+                GetElement(By.CssSelector("body > div > div > div > div.login-wrapper-container > div > section > form > " +
+                                          "div.form-field-password > div > div.js-password > div > button")).Click();
+                ((ITakesScreenshot)_browser).GetScreenshot().SaveAsFile(store.GetFileName("access_denied"), System.Drawing.Imaging.ImageFormat.Jpeg);
             }
-
+            else
+            {
+                do
+                {
+                    Thread.Sleep(1000);
+                }
+                while (GetElement(By.XPath("(//a[contains(text(),'Your Account')])[2]")) == null);
+                _browser.FindElement(By.LinkText("Purchase History")).Click();
+                _browser.FindElement(By.CssSelector("div.flyout.flyout-bottom.flyout-align-null.flyout-animate.flyout-fluid.flyout-button.xs-margin-ends > button.dropdown.btn.dropdown")).Click();
+                _browser.FindElement(By.XPath("(//button[@type='button'])[42]")).Click();
+                Thread.Sleep(500);
+                ((ITakesScreenshot)_browser).GetScreenshot().SaveAsFile(store.GetFileName("Walmart_history"), System.Drawing.Imaging.ImageFormat.Jpeg);
+                _browser.FindElement(By.LinkText("Payment Methods")).Click();
+                Thread.Sleep(500);
+                ((ITakesScreenshot)_browser).GetScreenshot().SaveAsFile(store.GetFileName("Walmart_Payment"), System.Drawing.Imaging.ImageFormat.Jpeg);
+                _browser.FindElement(By.LinkText("Your Account")).Click();
+                _browser.FindElement(By.LinkText("Shipping Addresses")).Click();
+                Thread.Sleep(500);
+                ((ITakesScreenshot)_browser).GetScreenshot().SaveAsFile(store.GetFileName("Walmart_Address"), System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
             _browser.Quit();
         }
     }

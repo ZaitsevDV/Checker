@@ -45,7 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Checkers\Sears.cs" />
     <Compile Include="Checkers\Wallmart.cs" />
+    <Compile Include="Model\Store.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
