@@ -43,7 +43,12 @@ namespace Checker
                 var sears = new Sears();
                 sears.Check(user.Login, user.Password);
             }
-            if (WallmartCheckBox.IsChecked == false && SearsCheckBox.IsChecked == false)
+            if (TigerdirectCheckBox.IsChecked == true)
+            {
+                var tigerdirect = new Tigerdirect();
+                tigerdirect.Check(user.Login, user.Password);
+            }
+            if (WallmartCheckBox.IsChecked == false && SearsCheckBox.IsChecked == false && TigerdirectCheckBox.IsChecked == false)
             {
                 MessageBox.Show("Choose what sites you whant to check", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
             }

@@ -11,11 +11,12 @@
             <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,271,0,0" IsCancel="True" Click="Exit_Click"/>
             <Label Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Height="27" Width="60"/>
             <Label Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,42,0,0"/>
-            <CheckBox x:Name="SearsCheckBox" Content="Sears" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,153,0,0" IsChecked="True"/>
+            <CheckBox x:Name="SearsCheckBox" Content="Sears" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,153,0,0" IsChecked="False" IsEnabled="False"/>
             <Button x:Name="GetFolder" Content="Browse..." HorizontalAlignment="Left" Margin="204,74,0,0" VerticalAlignment="Top" Width="75" Click="GetFolder_Click"/>
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Folder to store screenshots" VerticalAlignment="Top" Margin="17,76,0,0" Width="182" Height="16"/>
             <TextBox x:Name="FolderTextBox" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="262" Margin="17,99,0,0"/>
             <CheckBox x:Name="WallmartCheckBox" Content="Wallmart" VerticalAlignment="Top" Margin="17,132,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="67"/>
+            <CheckBox x:Name="TigerdirectCheckBox" Content="Tigerdirect" VerticalAlignment="Top" Margin="18,173,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="67"/>
 
 
 

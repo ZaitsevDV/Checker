@@ -41,7 +41,7 @@ namespace AppData.Checkers
             {
                 GetElement(By.CssSelector("body > div > div > div > div.login-wrapper-container > div > section > form > " +
                                           "div.form-field-password > div > div.js-password > div > button")).Click();
-                ((ITakesScreenshot)_browser).GetScreenshot().SaveAsFile(store.GetFileName("access_denied"), System.Drawing.Imaging.ImageFormat.Jpeg);
+                ((ITakesScreenshot)_browser).GetScreenshot().SaveAsFile(store.GetFileName("Wallmart", login), System.Drawing.Imaging.ImageFormat.Jpeg);
             }
             else
             {
@@ -54,14 +54,14 @@ namespace AppData.Checkers
                 _browser.FindElement(By.CssSelector("div.flyout.flyout-bottom.flyout-align-null.flyout-animate.flyout-fluid.flyout-button.xs-margin-ends > button.dropdown.btn.dropdown")).Click();
                 _browser.FindElement(By.XPath("(//button[@type='button'])[42]")).Click();
                 Thread.Sleep(500);
-                ((ITakesScreenshot)_browser).GetScreenshot().SaveAsFile(store.GetFileName("Walmart_history"), System.Drawing.Imaging.ImageFormat.Jpeg);
+                ((ITakesScreenshot)_browser).GetScreenshot().SaveAsFile(store.GetFileName("Walmart_history", login), System.Drawing.Imaging.ImageFormat.Jpeg);
                 _browser.FindElement(By.LinkText("Payment Methods")).Click();
                 Thread.Sleep(500);
-                ((ITakesScreenshot)_browser).GetScreenshot().SaveAsFile(store.GetFileName("Walmart_Payment"), System.Drawing.Imaging.ImageFormat.Jpeg);
+                ((ITakesScreenshot)_browser).GetScreenshot().SaveAsFile(store.GetFileName("Walmart_Payment", login), System.Drawing.Imaging.ImageFormat.Jpeg);
                 _browser.FindElement(By.LinkText("Your Account")).Click();
                 _browser.FindElement(By.LinkText("Shipping Addresses")).Click();
                 Thread.Sleep(500);
-                ((ITakesScreenshot)_browser).GetScreenshot().SaveAsFile(store.GetFileName("Walmart_Address"), System.Drawing.Imaging.ImageFormat.Jpeg);
+                ((ITakesScreenshot)_browser).GetScreenshot().SaveAsFile(store.GetFileName("Walmart_Address", login), System.Drawing.Imaging.ImageFormat.Jpeg);
             }
             _browser.Quit();
         }

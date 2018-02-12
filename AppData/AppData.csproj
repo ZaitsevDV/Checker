@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Checkers\Sears.cs" />
+    <Compile Include="Checkers\Tigerdirect.cs" />
     <Compile Include="Checkers\Wallmart.cs" />
     <Compile Include="Model\Store.cs" />
     <Compile Include="Model\User.cs" />

@@ -36,7 +36,7 @@ namespace AppData.Checkers
             //_browser.FindElement(By.CssSelector("button.shcBtn.shcBtnCTA.signIn")).Click();
 
             Thread.Sleep(1000);
-            ((ITakesScreenshot)_browser).GetScreenshot().SaveAsFile(store.GetFileName("sears"), System.Drawing.Imaging.ImageFormat.Jpeg);
+            ((ITakesScreenshot)_browser).GetScreenshot().SaveAsFile(store.GetFileName("Sears", user.Login), System.Drawing.Imaging.ImageFormat.Jpeg);
             _browser.Quit();
         }
     }
