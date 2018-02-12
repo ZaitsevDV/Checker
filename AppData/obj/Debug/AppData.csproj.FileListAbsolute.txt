@@ -1,0 +1,8 @@
+C:\Projects\Checker\AppData\bin\Debug\AppData.dll
+C:\Projects\Checker\AppData\bin\Debug\AppData.pdb
+C:\Projects\Checker\AppData\bin\Debug\WebDriver.dll
+C:\Projects\Checker\AppData\bin\Debug\WebDriver.xml
+C:\Projects\Checker\AppData\obj\Debug\AppData.csprojResolveAssemblyReference.cache
+C:\Projects\Checker\AppData\obj\Debug\AppData.csproj.CoreCompileInputs.cache
+C:\Projects\Checker\AppData\obj\Debug\AppData.dll
+C:\Projects\Checker\AppData\obj\Debug\AppData.pdb
