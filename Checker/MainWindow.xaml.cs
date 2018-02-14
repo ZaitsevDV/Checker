@@ -30,6 +30,7 @@ namespace Checker
                 TigerdirectCheckBox.IsChecked == false &&
                 OverstockCheckBox.IsChecked == false &&
                 NeweggCheckBox.IsChecked == false &&
+                ToysrusCheckBox.IsChecked == false &&
                 BestbuyCheckBox.IsChecked == false)
             {
                 MessageBox.Show("Choose what sites you whant to check", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -161,16 +162,12 @@ namespace Checker
                 var newegg = new Newegg();
                 newegg.Check(user.Login, user.Password, browser);
             }
+
+            if (ToysrusCheckBox.IsChecked == true)
+            {
+                var toysrus = new Toysrus();
+                toysrus.Check(user.Login, user.Password, browser);
+            }
         }
     }
-
-    //internal class SelectElement
-    //{
-    //    private IWebElement webElement;
-
-    //    public SelectElement(IWebElement webElement)
-    //    {
-    //        this.webElement = webElement;
-    //    }
-    //}
 }

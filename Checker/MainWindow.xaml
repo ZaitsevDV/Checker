@@ -11,7 +11,7 @@
             <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,271,0,0" IsCancel="True" Click="Exit_Click"/>
             <Label Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,10,0,0" Height="27" Width="60"/>
             <Label Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,33,0,0" Height="24"/>
-            <CheckBox x:Name="SearsCheckBox" Content="Sears" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,230,0,0" IsChecked="False" IsEnabled="False"/>
+            <CheckBox x:Name="SearsCheckBox" Content="Sears" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="193,210,0,0" IsChecked="False" IsEnabled="False"/>
             <Grid Margin="18,160,9,98">
                 <Button x:Name="GetFolder" Content="Browse..." HorizontalAlignment="Left" Margin="186,0,0,0" VerticalAlignment="Top" Width="75" Click="GetFolder_Click" Height="20"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Folder to store screenshots" VerticalAlignment="Top" Margin="0,5,0,0" Width="182" Height="16"/>
@@ -30,6 +30,7 @@
             <CheckBox x:Name="OverstockCheckBox" Content="Overstock" VerticalAlignment="Top" Margin="107,209,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="81"/>
             <CheckBox x:Name="BestbuyCheckBox" Content="Bestbuy" VerticalAlignment="Top" Margin="107,229,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="81"/>
             <CheckBox x:Name="NeweggCheckBox" Content="Newegg" VerticalAlignment="Top" Margin="107,250,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="81"/>
+            <CheckBox x:Name="ToysrusCheckBox" Content="Toysrus" VerticalAlignment="Top" Margin="18,229,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="67"/>
 
 
 
