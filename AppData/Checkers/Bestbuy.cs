@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using AppData.Model;
+﻿using AppData.Model;
 using OpenQA.Selenium;
+using System;
+using System.IO;
+using System.Threading;
 
 namespace AppData.Checkers
 {

@@ -29,6 +29,7 @@
             <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Margin="79,10,0,0" Text="zdv3223666@gmail.com"/>
             <CheckBox x:Name="OverstockCheckBox" Content="Overstock" VerticalAlignment="Top" Margin="107,209,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="81"/>
             <CheckBox x:Name="BestbuyCheckBox" Content="Bestbuy" VerticalAlignment="Top" Margin="107,229,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="81"/>
+            <CheckBox x:Name="NeweggCheckBox" Content="Newegg" VerticalAlignment="Top" Margin="107,250,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="81"/>
 
 
 

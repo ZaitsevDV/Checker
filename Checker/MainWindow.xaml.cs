@@ -27,8 +27,9 @@ namespace Checker
         {
             if (WallmartCheckBox.IsChecked == false && 
                 SearsCheckBox.IsChecked == false &&
-                TigerdirectCheckBox.IsChecked == false && 
-                OverstockCheckBox.IsChecked == false && 
+                TigerdirectCheckBox.IsChecked == false &&
+                OverstockCheckBox.IsChecked == false &&
+                NeweggCheckBox.IsChecked == false &&
                 BestbuyCheckBox.IsChecked == false)
             {
                 MessageBox.Show("Choose what sites you whant to check", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -152,17 +153,15 @@ namespace Checker
             if (BestbuyCheckBox.IsChecked == true)
             {
                 var bestbuy = new Bestbuy();
-                //browser.Navigate().GoToUrl("https://www.bestbuy.com/");
-                //browser.FindElement(By.Name("select_locale")).Click();
-                //new SelectElement(browser.FindElement(By.Name("select_locale"))).SelectByText("United States - English");
-                //browser.FindElement(By.XPath("//option[@value='1']")).Click();
-                //browser.FindElement(By.XPath("//input[@type='checkbox']")).Click();
-                //browser.FindElement(By.XPath("//img[@alt='Go']")).Click();
-                //browser.FindElement(By.XPath("(//button[@type='button'])[3]")).Click();
                 bestbuy.Check(user.Login, user.Password, browser);
             }
-        }
 
+            if (NeweggCheckBox.IsChecked == true)
+            {
+                var newegg = new Newegg();
+                newegg.Check(user.Login, user.Password, browser);
+            }
+        }
     }
 
     //internal class SelectElement

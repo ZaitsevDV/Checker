@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Checkers\Bestbuy.cs" />
+    <Compile Include="Checkers\Newegg.cs" />
     <Compile Include="Checkers\Overstock.cs" />
     <Compile Include="Checkers\Sears.cs" />
     <Compile Include="Checkers\Tigerdirect.cs" />
