@@ -16,3 +16,11 @@ C:\Projects\Checker\Checker\obj\Debug\Checker.csproj.GenerateResource.Cache
 C:\Projects\Checker\Checker\obj\Debug\Checker.csproj.CoreCompileInputs.cache
 C:\Projects\Checker\Checker\obj\Debug\Checker.exe
 C:\Projects\Checker\Checker\obj\Debug\Checker.pdb
+C:\Projects\Checker\Checker\bin\Debug\FluentAssertions.Core.dll
+C:\Projects\Checker\Checker\bin\Debug\FluentAssertions.dll
+C:\Projects\Checker\Checker\bin\Debug\WebDriver.Support.dll
+C:\Projects\Checker\Checker\bin\Debug\FluentAssertions.pdb
+C:\Projects\Checker\Checker\bin\Debug\FluentAssertions.xml
+C:\Projects\Checker\Checker\bin\Debug\FluentAssertions.Core.pdb
+C:\Projects\Checker\Checker\bin\Debug\FluentAssertions.Core.xml
+C:\Projects\Checker\Checker\bin\Debug\WebDriver.Support.xml

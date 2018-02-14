@@ -6,3 +6,11 @@ C:\Projects\Checker\AppData\obj\Debug\AppData.csprojResolveAssemblyReference.cac
 C:\Projects\Checker\AppData\obj\Debug\AppData.csproj.CoreCompileInputs.cache
 C:\Projects\Checker\AppData\obj\Debug\AppData.dll
 C:\Projects\Checker\AppData\obj\Debug\AppData.pdb
+C:\Projects\Checker\AppData\bin\Debug\FluentAssertions.Core.dll
+C:\Projects\Checker\AppData\bin\Debug\FluentAssertions.dll
+C:\Projects\Checker\AppData\bin\Debug\WebDriver.Support.dll
+C:\Projects\Checker\AppData\bin\Debug\FluentAssertions.pdb
+C:\Projects\Checker\AppData\bin\Debug\FluentAssertions.xml
+C:\Projects\Checker\AppData\bin\Debug\FluentAssertions.Core.pdb
+C:\Projects\Checker\AppData\bin\Debug\FluentAssertions.Core.xml
+C:\Projects\Checker\AppData\bin\Debug\WebDriver.Support.xml

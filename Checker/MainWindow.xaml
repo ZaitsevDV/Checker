@@ -24,9 +24,11 @@
             <TextBox x:Name="SourceTextBox" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" Margin="18,85,0,0"/>
             <ProgressBar x:Name="ProgressBar" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="261" Margin="18,137,0,0"/>
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Get users" VerticalAlignment="Top" Margin="18,118,0,0" Width="97" Height="16"/>
-            <Button x:Name="GetUsers" Content="Download file..." HorizontalAlignment="Left" Margin="119,114,0,0" VerticalAlignment="Top" Width="160" Click="GetUsers_Click" IsEnabled="False"/>
+            <Button x:Name="GetUsers" Content="Download file" HorizontalAlignment="Left" Margin="119,114,0,0" VerticalAlignment="Top" Width="160" Click="GetUsers_Click" IsEnabled="False"/>
             <TextBox x:Name="PaswordTextBox" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Margin="79,37,0,0" Text="mogilev_01"/>
             <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Margin="79,10,0,0" Text="zdv3223666@gmail.com"/>
+            <CheckBox x:Name="OverstockCheckBox" Content="Overstock" VerticalAlignment="Top" Margin="107,209,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="81"/>
+            <CheckBox x:Name="BestbuyCheckBox" Content="Bestbuy" VerticalAlignment="Top" Margin="107,229,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="81"/>
 
 
 
