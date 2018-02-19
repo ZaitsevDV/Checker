@@ -4,36 +4,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Checker" Height="374.889" Width="315" ResizeMode="NoResize" ShowInTaskbar="True">
-    <Grid Margin="0,10,0.333,-0.333">
-        <Grid Margin="10,22,10,10">
-            <Button x:Name="Check" Content="Check" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Check_Click" Margin="10,271,0,0" IsDefault="True"/>
-            <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,271,0,0" IsCancel="True" Click="Exit_Click"/>
-            <Label Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,10,0,0" Height="27" Width="60"/>
-            <Label Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,33,0,0" Height="24"/>
-            <CheckBox x:Name="SearsCheckBox" Content="Sears" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="193,210,0,0" IsChecked="False" IsEnabled="False"/>
-            <Grid Margin="18,160,9,98">
-                <Button x:Name="GetFolder" Content="Browse..." HorizontalAlignment="Left" Margin="186,0,0,0" VerticalAlignment="Top" Width="75" Click="GetFolder_Click" Height="20"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Folder to store screenshots" VerticalAlignment="Top" Margin="0,5,0,0" Width="182" Height="16"/>
-                <TextBox x:Name="FolderTextBox" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="262" Margin="0,24,0,0"/>
-            </Grid>
-            <CheckBox x:Name="WallmartCheckBox" Content="Wallmart" VerticalAlignment="Top" Margin="18,209,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="67"/>
-            <CheckBox x:Name="TigerdirectCheckBox" Content="Tigerdirect" VerticalAlignment="Top" Margin="17,250,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="100"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Source file" VerticalAlignment="Top" Margin="18,66,0,0" Width="97" Height="16"/>
-            <Button x:Name="GetSource" Content="Select file..." HorizontalAlignment="Left" Margin="119,62,0,0" VerticalAlignment="Top" Width="160" Click="GetSource_Click"/>
-            <TextBox x:Name="SourceTextBox" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" Margin="18,85,0,0"/>
-            <ProgressBar x:Name="ProgressBar" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="261" Margin="18,137,0,0"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Get users" VerticalAlignment="Top" Margin="18,118,0,0" Width="97" Height="16"/>
-            <Button x:Name="GetUsers" Content="Download file" HorizontalAlignment="Left" Margin="119,114,0,0" VerticalAlignment="Top" Width="160" Click="GetUsers_Click" IsEnabled="False"/>
-            <TextBox x:Name="PaswordTextBox" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Margin="79,37,0,0" Text="mogilev_01"/>
-            <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Margin="79,10,0,0" Text="zdv3223666@gmail.com"/>
-            <CheckBox x:Name="OverstockCheckBox" Content="Overstock" VerticalAlignment="Top" Margin="107,209,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="81"/>
-            <CheckBox x:Name="BestbuyCheckBox" Content="Bestbuy" VerticalAlignment="Top" Margin="107,229,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="81"/>
-            <CheckBox x:Name="NeweggCheckBox" Content="Newegg" VerticalAlignment="Top" Margin="107,250,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="81"/>
-            <CheckBox x:Name="ToysrusCheckBox" Content="Toysrus" VerticalAlignment="Top" Margin="18,229,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="67"/>
-
-
-
+        Title="Checker" Height="340" Width="315" ResizeMode="NoResize" ShowInTaskbar="True">
+    <Grid Margin="0,0,0,0" RenderTransformOrigin="0,0">
+        <Button x:Name="Check" Content="Check" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Check_Click" Margin="69,263,0,0" IsDefault="True"/>
+        <Button x:Name="Exit" Content="Exit" VerticalAlignment="Top" Margin="160,263,74.333,0" IsCancel="True" Click="Exit_Click"/>
+        <CheckBox x:Name="SearsCheckBox" Content="Sears" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="193,177,0,0" IsChecked="False" IsEnabled="False"/>
+        <Grid Margin="18,115,20.333,138">
+            <Button x:Name="GetFolder" Content="Browse..." HorizontalAlignment="Left" Margin="187,1,0,0" VerticalAlignment="Top" Width="75" Click="GetFolder_Click" Height="20"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Folder to store results" VerticalAlignment="Top" Margin="0,5,0,0" Width="182" Height="16"/>
+            <TextBox x:Name="FolderTextBox" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="262" Margin="0,24,0,0"/>
         </Grid>
+        <CheckBox x:Name="WallmartCheckBox" Content="Wallmart" VerticalAlignment="Top" Margin="18,177,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="67"/>
+        <CheckBox x:Name="TigerdirectCheckBox" Content="Tigerdirect" VerticalAlignment="Top" Margin="17,218,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="100"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Source file" VerticalAlignment="Top" Margin="18,21,0,0" Width="97" Height="16"/>
+        <Button x:Name="GetSource" Content="Select file..." HorizontalAlignment="Left" Margin="119,17,0,0" VerticalAlignment="Top" Width="160" Click="GetSource_Click"/>
+        <TextBox x:Name="SourceTextBox" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" Margin="18,40,0,0"/>
+        <ProgressBar x:Name="ProgressBar" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="261" Margin="18,92,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Get users" VerticalAlignment="Top" Margin="18,73,0,0" Width="97" Height="16"/>
+        <Button x:Name="GetUsers" Content="Download file" HorizontalAlignment="Left" Margin="119,69,0,0" VerticalAlignment="Top" Width="160" Click="GetUsers_Click" IsEnabled="False"/>
+        <CheckBox x:Name="OverstockCheckBox" Content="Overstock" VerticalAlignment="Top" Margin="107,177,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="81"/>
+        <CheckBox x:Name="BestbuyCheckBox" Content="Bestbuy" VerticalAlignment="Top" Margin="107,197,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="81"/>
+        <CheckBox x:Name="NeweggCheckBox" Content="Newegg" VerticalAlignment="Top" Margin="107,218,0,0" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="81"/>
+        <CheckBox x:Name="ToysrusCheckBox" Content="Toysrus" VerticalAlignment="Top" IsChecked="True" Height="16" HorizontalAlignment="Left" Width="67" Margin="18,197,0,0"/>
     </Grid>
 </Window>

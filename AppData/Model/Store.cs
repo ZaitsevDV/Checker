@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Windows;
 
 namespace AppData.Model
 {
@@ -18,7 +19,17 @@ namespace AppData.Model
 
         public string ScreenShotFileName(string name, string username)
         {
-            return Directory + "\\" + DateTime.Now.ToString("yyyyMMdd_HHmmss tt") + name +" "+ username + ".jpeg";
+            return Directory + "\\" + DateTime.Now.ToString("yyyyMMdd_HHmmss tt") + name + " " + username + ".jpeg";
+        }
+
+        public static void ResultMessage(string usersCount)
+        {
+            MessageBox.Show("Checked " + usersCount + " users.\r\nResults you can see in: " + Directory,
+                "Results",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information,
+                MessageBoxResult.OK,
+                MessageBoxOptions.ServiceNotification);
         }
     }
 }

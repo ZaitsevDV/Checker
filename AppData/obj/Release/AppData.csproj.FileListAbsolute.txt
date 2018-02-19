@@ -5,4 +5,12 @@ C:\Projects\Checker\AppData\bin\Release\WebDriver.xml
 C:\Projects\Checker\AppData\obj\Release\AppData.csproj.CoreCompileInputs.cache
 C:\Projects\Checker\AppData\obj\Release\AppData.dll
 C:\Projects\Checker\AppData\obj\Release\AppData.pdb
+C:\Projects\Checker\AppData\bin\Release\FluentAssertions.Core.dll
+C:\Projects\Checker\AppData\bin\Release\FluentAssertions.dll
+C:\Projects\Checker\AppData\bin\Release\WebDriver.Support.dll
+C:\Projects\Checker\AppData\bin\Release\FluentAssertions.pdb
+C:\Projects\Checker\AppData\bin\Release\FluentAssertions.xml
+C:\Projects\Checker\AppData\bin\Release\FluentAssertions.Core.pdb
+C:\Projects\Checker\AppData\bin\Release\FluentAssertions.Core.xml
+C:\Projects\Checker\AppData\bin\Release\WebDriver.Support.xml
 C:\Projects\Checker\AppData\obj\Release\AppData.csprojResolveAssemblyReference.cache

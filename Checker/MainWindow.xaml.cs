@@ -7,7 +7,6 @@ using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Forms;
-using OpenQA.Selenium.Support.UI;
 using MessageBox = System.Windows.MessageBox;
 
 namespace Checker
@@ -25,7 +24,7 @@ namespace Checker
 
         private void Check_Click(object sender, RoutedEventArgs e)
         {
-            if (WallmartCheckBox.IsChecked == false && 
+            if (WallmartCheckBox.IsChecked == false &&
                 SearsCheckBox.IsChecked == false &&
                 TigerdirectCheckBox.IsChecked == false &&
                 OverstockCheckBox.IsChecked == false &&
@@ -53,22 +52,11 @@ namespace Checker
                     ProgressBar.Value += 1;
                 }
                 browser.Quit();
-            }
-            else if (LoginTextBox.Text != "" && PaswordTextBox.Text != "")
-            {
-                IWebDriver browser = new OpenQA.Selenium.Chrome.ChromeDriver();
-                browser.Manage().Window.Maximize();
-                var user = new User
-                {
-                    Login = LoginTextBox.Text,
-                    Password = PaswordTextBox.Text
-                };
-                CheckSelected(user, browser);
-                browser.Quit();
+                Store.ResultMessage(ProgressBar.Value.ToString());
             }
             else
             {
-                MessageBox.Show("Enter the login and the password, or select source file", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("You must download users", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
@@ -102,6 +90,11 @@ namespace Checker
             };
             var sourceResult = sourceBrowserDlg.ShowDialog();
             if (!sourceResult.Equals(System.Windows.Forms.DialogResult.OK)) return;
+            if (!sourceBrowserDlg.SafeFileName.EndsWith("txt"))
+            {
+                MessageBox.Show("Only \"txt\" file can be checked", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                GetSource_Click(sender, e);
+            }
             SourceTextBox.Text = sourceBrowserDlg.SafeFileName;
             Store.SourceFile = sourceBrowserDlg.FileName;
             GetUsers.IsEnabled = true;
@@ -112,16 +105,24 @@ namespace Checker
             var lines = File.ReadLines(Store.SourceFile).ToList();
             ProgressBar.Maximum = lines.Count;
             var users = new List<User>();
-            foreach (var item in lines)
+            try
             {
-                var yourStringArray = item.Split('\t');
-                var login = yourStringArray[0];
-                var password = yourStringArray[1];
-                var user = new User(login, password);
-                users.Add(user);
-                ProgressBar.Value = users.Count;
+                foreach (var item in lines)
+                {
+                    var yourStringArray = item.Split('\t');
+                    var login = yourStringArray[0];
+                    var password = yourStringArray[1];
+                    var user = new User(login, password);
+                    users.Add(user);
+                    ProgressBar.Value = users.Count;
+                }
+                Store.Users = users;
             }
-            Store.Users = users;
+            catch (IndexOutOfRangeException)
+            {
+                MessageBox.Show("Check source file", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                GetSource_Click(sender, e);
+            }
         }
 
         private void CheckSelected(User user, IWebDriver browser)
@@ -136,7 +137,7 @@ namespace Checker
             if (SearsCheckBox.IsChecked == true)
             {
                 var sears = new Sears();
-                sears.Check(user.Login, user.Password);
+                sears.Check(user.Login, user.Password, browser);
             }
 
             if (TigerdirectCheckBox.IsChecked == true)
